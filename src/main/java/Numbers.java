@@ -1,5 +1,5 @@
 public class Numbers {
-    public boolean checkIfNumbersIsDivisibleByTwo(int number){
+    public boolean isNumberDivisibleByTwo(int number){
         if (number == 0){
             return false;
         }
