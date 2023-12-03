@@ -1,5 +1,4 @@
 import java.time.Month;
-
 public class Seasons {
     public static void getSeason (Month month){
         switch (month){
