@@ -12,14 +12,14 @@ class NumbersTest {
     @ValueSource(ints = {2, 4, 6, 8, 10})
     void shouldReturnTrue(int input) {
         Numbers numbers = new Numbers();
-        Assertions.assertTrue(numbers.checkIfNumbersIsDivisibleByTwo(input));
+        Assertions.assertTrue(numbers.isNumberDivisibleByTwo(input));
     }
     @ParameterizedTest
     @DisplayName("Should return false if number is zero or not divisible by two")
     @ValueSource(ints = {0, 3, 7, -7})
     void shouldReturnFalse(int input) {
         Numbers numbers = new Numbers();
-        Assertions.assertFalse(numbers.checkIfNumbersIsDivisibleByTwo(input));
+        Assertions.assertFalse(numbers.isNumberDivisibleByTwo(input));
     }
 
 
