@@ -10,4 +10,12 @@ public class Numbers {
             return false;
         }
     }
+    public static int getSumOfDigitsInNumber(int number) {
+        int sumOfDigits = 0;
+        while (number > 0){
+            sumOfDigits = sumOfDigits + number % 10;
+            number = number / 10;
+        }
+        return sumOfDigits;
+    }
 }

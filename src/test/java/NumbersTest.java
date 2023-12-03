@@ -1,6 +1,8 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 class NumbersTest {
@@ -18,5 +20,13 @@ class NumbersTest {
     void shouldReturnFalse(int input) {
         Numbers numbers = new Numbers();
         Assertions.assertFalse(numbers.checkIfNumbersIsDivisibleByTwo(input));
+    }
+
+
+    @ParameterizedTest
+    @CsvSource (value = {"12 : 3", "3 : 3", "123 : 6", "20 : 2","3 : 3"}, delimiter = ':')
+    void shouldGetSumOfDigitsInNumber(int input, int expected) {
+        int result = Numbers.getSumOfDigitsInNumber(input);
+        Assertions.assertEquals(result, expected);
     }
 }
