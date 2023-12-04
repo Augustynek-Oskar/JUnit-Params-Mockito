@@ -45,5 +45,4 @@ class SeasonCalendarTest {
         Assertions.assertEquals(expectedResult,SeasonCalendar.getSeason(Month.APRIL));
         Assertions.assertEquals(expectedResult,SeasonCalendar.getSeason(Month.MAY));
     }
-
 }
