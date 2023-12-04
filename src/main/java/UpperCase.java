@@ -3,8 +3,8 @@ public class UpperCase {
         getUpperCase("");
     }
     public static String getUpperCase (String text){
-            if (text == null) throw new NullPointerException("Text cannot be null!");
-            else if (text == "") throw new RuntimeException("Text cannot be empty!");
+            if (text == null) return "";
+            if (text == "") return "";
             else return text.toUpperCase();
     }
 }
