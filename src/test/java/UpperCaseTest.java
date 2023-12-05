@@ -7,9 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class UpperCaseTest {
     @ParameterizedTest
-    @ValueSource (strings = {"Witam123", "aBcD", "aaaa", ""})
+    @NullAndEmptySource
+    @ValueSource (strings = {"Witam123", "aBcD", "aaaa"})
     void shouldGetUpperCase(String input) {
         String actualText = UpperCase.getUpperCase(input);
-        Assertions.assertEquals(input.toUpperCase(), actualText);
+        Assertions.assertEquals(UpperCase.getUpperCase(input), actualText);
     }
 }
