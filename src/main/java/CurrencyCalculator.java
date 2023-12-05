@@ -1,16 +1,19 @@
 public class CurrencyCalculator implements CurrencyExchangeRate{
 
-    public static void main(String[] args) {
-
-    }
     public static float plnToEuroCalculator (float amountInZlotys){
-        return amountInZlotys / CurrencyExchangeRate.euroToPlnBuyRate();
+        float convertedAmount = amountInZlotys / CurrencyExchangeRate.euroToPlnBuyRate();
+        System.out.println(amountInZlotys + " " + Currency.PLN + " is worth: " + convertedAmount + " " + Currency.EURO);
+        return convertedAmount;
     }
     public static float plnToUsdCalculator (float amountInZlotys){
-        return amountInZlotys / CurrencyExchangeRate.euroToPlnBuyRate();
+        float convertedAmount = amountInZlotys / CurrencyExchangeRate.usdToPlnBuyRate();
+        System.out.println(amountInZlotys + " " + Currency.PLN + " is worth: " + convertedAmount + " " + Currency.USD);
+        return convertedAmount;
     }
     public static float plnToGbpCalculator (float amountInZlotys){
-        return amountInZlotys / CurrencyExchangeRate.euroToPlnBuyRate();
+        float convertedAmount = amountInZlotys / CurrencyExchangeRate.gbpToPlnBuyRate();
+        System.out.println(amountInZlotys + " " + Currency.PLN + " is worth: " + convertedAmount + " " + Currency.GBP);
+        return convertedAmount;
     }
 
 }
