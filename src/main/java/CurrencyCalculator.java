@@ -15,5 +15,4 @@ public class CurrencyCalculator implements CurrencyExchangeRate{
         System.out.println(amountInZlotys + " " + Currency.PLN + " is worth: " + convertedAmount + " " + Currency.GBP);
         return convertedAmount;
     }
-
 }
