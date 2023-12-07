@@ -1,21 +1,29 @@
-public class TrainingWatch implements TrainingParameters {
+public class TrainingWatch {
     private int trainingLength;
     private int caloriesBurned;
     private int averagePulse;
 
-
-    @Override
-    public int showTrainingLength(int lengthInMinutes) {
-        return 0;
+    public int getTrainingLength() {
+        return trainingLength;
     }
 
-    @Override
-    public int showCaloriesBurned(int kcal) {
-        return 0;
+    public int getCaloriesBurned() {
+        return caloriesBurned;
     }
 
-    @Override
-    public int showAvgPulse(int pulse) {
-        return 0;
+    public int getAveragePulse() {
+        return averagePulse;
+    }
+
+    public void setTrainingLength(int trainingLength) {
+        this.trainingLength = trainingLength;
+    }
+
+    public void setCaloriesBurned(int caloriesBurned) {
+        this.caloriesBurned = caloriesBurned;
+    }
+
+    public void setAveragePulse(int averagePulse) {
+        this.averagePulse = averagePulse;
     }
 }
