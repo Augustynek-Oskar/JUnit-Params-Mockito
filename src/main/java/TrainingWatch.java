@@ -1,7 +1,7 @@
-public class TrainingWatch {
-    private int trainingLength;
-    private int caloriesBurned;
-    private int averagePulse;
+public class TrainingWatch extends TrainingEvaluation{
+    private int trainingLength = 45;
+    private int caloriesBurned = 250;
+    private int averagePulse = 175;
 
     public int getTrainingLength() {
         return trainingLength;
