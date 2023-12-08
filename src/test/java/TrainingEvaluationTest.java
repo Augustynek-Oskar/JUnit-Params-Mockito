@@ -42,11 +42,13 @@ class TrainingEvaluationTest {
     @ParameterizedTest
     @CsvSource (value = {
             "1.0:Low efficiency",
-            "1.2:Good Efficiency",
+            "1.2:Good efficiency",
             "2:Very good efficiency",
-            "3:Excellent efficiency"},
+            "3:Excellent efficiency",
+            "0:Unexpected value!"},
             delimiter = ':')
-    void trainingEfficiency() {
-
+    void trainingEfficiency(String input, String expected) {
+        String actualValue = TrainingEvaluation.trainingEfficiency(Float.parseFloat(input));
+        Assertions.assertEquals(expected, actualValue);
     }
 }
