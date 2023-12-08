@@ -13,7 +13,7 @@ public class TrainingEvaluation{
         else return 0;
     }
 
-    public static int avgBpmRating(int bpm){
+    public static int bpmRating(int bpm){
         if (bpm > 175) return 1 * 3;
         if (bpm >= 160 && bpm <= 175) return 2 * 3;
         if (bpm < 160) return 3 * 3;
@@ -23,7 +23,7 @@ public class TrainingEvaluation{
     public static float overallRating(int length, int burnedKcal, int bpm){
         float lengthRating = lengthRating(length);
         float burnedKcalRating = burnedKcalRating(burnedKcal);
-        float bpmRating = avgBpmRating(bpm);
+        float bpmRating = bpmRating(bpm);
         return (lengthRating + burnedKcalRating + bpmRating) / 6;
     }
 

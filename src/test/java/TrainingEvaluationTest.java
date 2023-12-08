@@ -23,12 +23,15 @@ class TrainingEvaluationTest {
     }
 
     @ParameterizedTest
-    @CsvSource
-    void avgBpmRating() {
+    @CsvSource (value = {"176:3", "160:6", "175:6", "165:6", "159:9"}, delimiter = ':')
+    void shouldReturnBpmRating(String input, String expected) {
+        int actualValue = TrainingEvaluation.bpmRating(Integer.parseInt(input));
+        Assertions.assertEquals(Integer.parseInt(expected), actualValue);
     }
 
     @ParameterizedTest
-    void overallRating() {
+    void overallRating(String length, String burnedKcal, String bpm, String expected) {
+
     }
 
     @ParameterizedTest
