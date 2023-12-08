@@ -47,7 +47,7 @@ class TrainingEvaluationTest {
             "3:Excellent efficiency",
             "0:Unexpected value!"},
             delimiter = ':')
-    void trainingEfficiency(String input, String expected) {
+    void shouldReturnTrainingEfficiency(String input, String expected) {
         String actualValue = TrainingEvaluation.trainingEfficiency(Float.parseFloat(input));
         Assertions.assertEquals(expected, actualValue);
     }
