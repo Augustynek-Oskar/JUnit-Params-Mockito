@@ -3,6 +3,7 @@ public class TrainingEvaluation{
         TrainingWatch trainingWatch = new TrainingWatch();
         float overallRating = (float) (lengthRating(trainingWatch.getTrainingLength()) + burnedKcalRating(trainingWatch.getCaloriesBurned()) + avgBpmRating(trainingWatch.getAveragePulse())) / 6;
         System.out.println("Your rating is: " + overallRating);
+        trainingEfficiency(1.6f);
 
 
     }
@@ -34,4 +35,10 @@ public class TrainingEvaluation{
         return (lengthRating + burnedKcalRating + bpmRating) / 6;
     }
 
+    public static void trainingEfficiency(float overallRating){
+        if (overallRating < 1.2f) System.out.println("Low efficiency");
+        if (overallRating >= 1.2f && overallRating < 2) System.out.println("Good efficiency");
+        if (overallRating >= 2 && overallRating < 3) System.out.println("Very good efficiency");
+        if (overallRating == 3) System.out.println("Excellent efficiency");
+    }
 }
