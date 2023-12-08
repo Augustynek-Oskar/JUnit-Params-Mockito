@@ -31,7 +31,7 @@ class TrainingEvaluationTest {
 
     @ParameterizedTest
     @CsvSource (value = {"30:350:165:2", "61:401:159:3"}, delimiter = ':')
-    void overallRating(String length, String burnedKcal, String bpm, String expected) {
+    void shouldReturnOverallRating(String length, String burnedKcal, String bpm, String expected) {
         float actualValue = TrainingEvaluation.overallRating
                 (Integer.parseInt(length),
                 (Integer.parseInt(burnedKcal)),
@@ -40,7 +40,12 @@ class TrainingEvaluationTest {
     }
 
     @ParameterizedTest
-    @CsvSource (value = {"1.0:Low efficiency", "1.2:Good Efficiency", "2:Very good efficiency",}, delimiter = ':')
+    @CsvSource (value = {
+            "1.0:Low efficiency",
+            "1.2:Good Efficiency",
+            "2:Very good efficiency",
+            "3:Excellent efficiency"},
+            delimiter = ':')
     void trainingEfficiency() {
 
     }
