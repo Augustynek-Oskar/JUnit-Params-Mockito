@@ -27,4 +27,11 @@ public class TrainingEvaluation{
         else return 0;
     }
 
+    public static int overallRating(int length, int burnedKcal, int bpm){
+        int lengthRating = lengthRating(length);
+        int burnedKcalRating = burnedKcalRating(burnedKcal);
+        int bpmRating = avgBpmRating(bpm);
+        return (lengthRating + burnedKcalRating + bpmRating) / 6;
+    }
+
 }
