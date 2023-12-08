@@ -30,12 +30,18 @@ class TrainingEvaluationTest {
     }
 
     @ParameterizedTest
-    @CsvSource (value = {}, delimiter = ':')
+    @CsvSource (value = {"30:350:165:2", "61:401:159:3"}, delimiter = ':')
     void overallRating(String length, String burnedKcal, String bpm, String expected) {
-
+        float actualValue = TrainingEvaluation.overallRating
+                (Integer.parseInt(length),
+                (Integer.parseInt(burnedKcal)),
+                (Integer.parseInt(bpm)));
+        Assertions.assertEquals(Float.parseFloat(expected), actualValue);
     }
 
     @ParameterizedTest
+    @CsvSource (value = {"1.0:Low efficiency", "1.2:Good Efficiency", "2:Very good efficiency",}, delimiter = ':')
     void trainingEfficiency() {
+
     }
 }
