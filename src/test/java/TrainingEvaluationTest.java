@@ -30,6 +30,7 @@ class TrainingEvaluationTest {
     }
 
     @ParameterizedTest
+    @CsvSource (value = {}, delimiter = ':')
     void overallRating(String length, String burnedKcal, String bpm, String expected) {
 
     }
