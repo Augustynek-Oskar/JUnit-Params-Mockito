@@ -8,6 +8,12 @@ public class SalaryCalculator extends Employee implements BaseSalary, SaturdayBo
         System.out.println("Saturdays bonus is: " + SaturdayBonus.getSaturdaysBonus(16));
         System.out.println("One time bonus is: " + oneTimeBonus);
         System.out.println("Total salary is: " + totalSalary);
-
+        System.out.println(getTotalSalary(145, 8));
+    }
+    public static float getTotalSalary(int baseHours, int saturdayHours){
+        return BaseSalary.getBaseSalary(baseHours) + SaturdayBonus.getSaturdaysBonus(saturdayHours);
+    }
+    public static float getTotalSalary(int baseHours, int saturdayHours, float oneTimeBonus){
+        return BaseSalary.getBaseSalary(baseHours) + SaturdayBonus.getSaturdaysBonus(saturdayHours) + oneTimeBonus;
     }
 }
