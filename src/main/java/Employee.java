@@ -1,13 +1,13 @@
 public class Employee {
     int hoursWorked;
-    int payForHour;
+    int hourlyPayInPln = 32;
 
     public int getHoursWorked() {
         return hoursWorked;
     }
 
     public int getPayForHour() {
-        return payForHour;
+        return hourlyPayInPln;
     }
 
     public void setHoursWorked(int hoursWorked) {
@@ -15,6 +15,6 @@ public class Employee {
     }
 
     public void setPayForHour(int payForHour) {
-        this.payForHour = payForHour;
+        this.hourlyPayInPln = payForHour;
     }
 }

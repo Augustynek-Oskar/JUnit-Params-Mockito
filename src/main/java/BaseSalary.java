@@ -1,4 +1,4 @@
 public interface BaseSalary {
-    int getBaseSalary (int hoursWorked);
+    float getBaseSalary (int hoursWorked);
 
 }
