@@ -1,6 +1,6 @@
 public class Employee {
-    int hoursWorked;
-    int hourlyPayInPln = 32;
+    private int hoursWorked;
+    protected int hourlyPayInPln = 32;
 
     public int getHoursWorked() {
         return hoursWorked;

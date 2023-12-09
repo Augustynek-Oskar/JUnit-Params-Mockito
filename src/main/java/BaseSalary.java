@@ -1,4 +1,7 @@
 public interface BaseSalary {
-    float getBaseSalary (int hoursWorked);
-
+    static float getBaseSalary(int hoursWorked) {
+        Employee employee = new Employee();
+        employee.setHoursWorked(hoursWorked);
+        return employee.getHoursWorked() * employee.hourlyPayInPln;
+    }
 }
