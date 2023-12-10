@@ -1,4 +1,7 @@
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -6,14 +9,20 @@ import static org.junit.jupiter.api.Assertions.*;
 class SalaryCalculatorTest {
 
     @Test
-    void getTotalSalary() {
+    @DisplayName("Should calculate base salary")
+    void getBaseSalary() {
         SalaryCalculator salaryCalculator = Mockito.mock(SalaryCalculator.class);
         float expectedValue = 5120f;
-        salaryCalculator.
-
+        Mockito.when(salaryCalculator.getBaseSalary(160)).thenReturn(expectedValue);
+        Assertions.assertEquals(expectedValue, salaryCalculator.getBaseSalary(160));
     }
 
     @Test
-    void testGetTotalSalary() {
+    @DisplayName("Should calculate bonus salary from working saturdays")
+    void getSaturdayBonus() {
+        SalaryCalculator salaryCalculator = Mockito.mock(SalaryCalculator.class);
+        float expectedValue = 608;
+        Mockito.when(salaryCalculator.getSaturdaysBonus(16)).thenReturn(expectedValue);
+        Assertions.assertEquals(expectedValue, salaryCalculator.getSaturdaysBonus(16));
     }
 }

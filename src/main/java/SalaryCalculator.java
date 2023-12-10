@@ -1,6 +1,6 @@
 public class SalaryCalculator extends Employee implements BaseSalary, SaturdayBonus {
 
-    public static float getTotalSalary(int baseHours, int saturdayHours){
+    public float getTotalSalary(int baseHours, int saturdayHours){
         Employee employee = new Employee();
         //base salary
         employee.setHoursWorked(baseHours);
@@ -9,7 +9,7 @@ public class SalaryCalculator extends Employee implements BaseSalary, SaturdayBo
 
         //bonus saturdays
         employee.setHoursWorked(saturdayHours);
-        employee.setPayForHour(37);
+        employee.setPayForHour(38);
         int saturdayHoursWorked = employee.getHoursWorked();
         float saturdaysBonusSalary = saturdayHoursWorked * employee.getPayForHour();
 
@@ -25,7 +25,7 @@ public class SalaryCalculator extends Employee implements BaseSalary, SaturdayBo
 
         //bonus saturdays
         employee.setHoursWorked(saturdayHours);
-        employee.setPayForHour(37);
+        employee.setPayForHour(38);
         int saturdayHoursWorked = employee.getHoursWorked();
         float saturdaysBonusSalary = saturdayHoursWorked * employee.getPayForHour();
 
